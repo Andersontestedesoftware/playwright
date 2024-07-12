@@ -42,7 +42,6 @@ test('Login Com sucesso 2', async ({ page }) => {
   await page.getByRole('button', { name: 'login' }).click();
 });
 
-
 test('Login Com sucessoo @login', async ({ page }) => {
   //const button = await page.getByRole('button', {name: 'Send Mail'})
   const texto = await page.waitForSelector('text=NEWSLETTER') 
@@ -80,7 +79,6 @@ test('Login Com sucesso 4', async ({ page }) => {
   await page.screenshot({ path: 'screenshot/screenshot2.png' });
   await page.getByRole('button', { name: 'login' }).click();
 });
-
 
 test.afterEach(async({ page }) =>{
   //
