@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+
 test.beforeEach(async({ page }) =>{
   await page.goto('https://automationpratice.com.br/')
 })
@@ -17,6 +18,7 @@ test('Login Com sucesso @login', async ({ page }) => {
   await page.locator('#password').fill('123456');
   await page.screenshot({ path: 'screenshot/screenshot2.png' });
   await page.getByRole('button', { name: 'login' }).click();
+});
 
 test.afterEach(async({ page }) =>{
   //
